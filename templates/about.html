@@ -1,0 +1,61 @@
+
+{% load static %}
+<section id="about" class="about-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="about-image-part wow fadeInUp delay-0-3s">
+                    <div class="about-image-part2">
+                        {% if profile.profile_image %}
+                            <img src="{{ profile.profile_image.url }}" alt="About Me" />
+                        {% else %}
+                            <img src="{% static 'assets/images/about/ab.jpg' %}" alt="About Me" />
+                        {% endif %}
+                    </div>
+                    
+                    <h2>Muhammad Tayyab</h2>
+                    <p>I am a Web Developer based in san francisco.</p>
+                    <div class="about-social text-center">
+                        <ul>
+                            <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
+                            <li><a href="https://wa.me/+923044749914"><i class="ri-whatsapp-line"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/muhammad-tayyab-king/"><i class="ri-linkedin-fill"></i></a></li>
+                            <li><a href="https://github.com/MuhammadTayyab88"><i class="ri-github-line"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-8">
+                <div class="about-content-part wow fadeInUp delay-0-2s">
+                    <p>Hello There!</p>
+                    <h2>
+                        I’m <span>Muhammad Tayyab</span>, a full stack web Developer <span></span><span>with expertise in building robust and scalable applications.</span>
+                    </h2>
+                    <div class="adress-field">
+                        <ul>
+                            <li><i class="ri-circle-fill"></i>Available for Freelancing</li>
+                        </ul>
+                    </div>
+                    <div class="hero-btns">
+                        <a href="{% url 'download_cv' %}" class="theme-btn">Download CV <i class="ri-download-line"></i></a>
+                    </div>
+                </div>
+                <div class="about-content-part-bottom wow fadeInUp delay-0-2s">
+                    <div class="company-list">
+                        <div class="scroller" data-direction="left" data-speed="slow">
+                            <div class="scroller__inner">
+                                <h4>As a full-stack developer combining advanced AI capabilities, I specialize in developing scalable applications that integrate cutting-edge AI solutions to solve complex problems.</h4>
+                                <h4>My role involves creating seamless user experiences and robust backend systems, utilizing AI to enhance automation, data processing, and decision-making.</h4>
+                                <h4>I work with various digital technologies, building comprehensive solutions that cater to diverse business needs across industries.</h4>
+                                <h4>Whether it's developing custom AI models or integrating existing ones, my focus is on delivering intelligent solutions that drive business growth and efficiency.</h4>
+                                <h4>From web development to AI-driven applications, I offer a broad spectrum of services to help organizations stay ahead in the digital age.</h4>
+                            </div>
+                            
+                        </div>
+                    </div>                       
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

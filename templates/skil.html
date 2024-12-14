@@ -1,0 +1,37 @@
+{% load static %}
+
+<section id="skills" class="skill-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12">
+                <div class="section-title text-center mb-60 wow fadeInUp delay-0-2s">
+                    <p>Pro Skills</p>
+                    <h2>Let’s Explore My Skills</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="skill-items-wrap">
+                    <div class="row">
+                        {% if skills %}
+                            <div class="col-lg-3 col-sm-6 col-xs-12">
+                                <div class="skill-item wow fadeInUp delay-0-2s">
+                                    {% if skills.cover_image %}
+                                        <img src="{{ skills.cover_image.url }}" alt="{{ skills.name }}">
+                                    {% else %}
+                                        <img src="{% static 'assets/images/skills/skill1.png' %}" alt="No Image">
+                                    {% endif %}
+                                    <h5>{{ skills.name }}</h5>
+                                    <span class="percent">{{ skills.percentage }}%</span>
+                                </div>
+                            </div>
+                        {% else %}
+                            <p>No skills available.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
