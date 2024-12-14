@@ -57,6 +57,6 @@ def contact_success(request):
     return render(request, 'contact_success.html')
 
 def skills_view(request):
-    skills = Skills.objects.first()  # Fetch all skills
+    skills = Skills.objects.all()  # Fetch all skills
     print(skills)  # Debug: Print skills in the console
     return render(request, 'skil.html', {'skills': skills})

@@ -14,21 +14,21 @@
             <div class="col-lg-12">
                 <div class="skill-items-wrap">
                     <div class="row">
-                        {% if skills %}
+                        {% for skill in skills %}
                             <div class="col-lg-3 col-sm-6 col-xs-12">
                                 <div class="skill-item wow fadeInUp delay-0-2s">
-                                    {% if skills.cover_image %}
-                                        <img src="{{ skills.cover_image.url }}" alt="{{ skills.name }}">
+                                    {% if skill.cover_image %}
+                                        <img src="{{ skill.cover_image.url }}" alt="{{ skill.name }}">
                                     {% else %}
                                         <img src="{% static 'assets/images/skills/skill1.png' %}" alt="No Image">
                                     {% endif %}
-                                    <h5>{{ skills.name }}</h5>
-                                    <span class="percent">{{ skills.percentage }}%</span>
+                                    <h5>{{ skill.name }}</h5>
+                                    <span class="percent">{{ skill.percentage }}%</span>
                                 </div>
                             </div>
-                        {% else %}
+                        {% empty %}
                             <p>No skills available.</p>
-                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
