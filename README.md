@@ -22,7 +22,7 @@ def skills_view(request):
     return render(request, 'skil.html', {'skills': skills})
 
 <!-- html -->
-<!-- {% load static %}
+ {% load static %}
 
 <section id="skills" class="skill-area">
     <div class="container">
@@ -58,7 +58,7 @@ def skills_view(request):
             </div>
         </div>
     </div>
-</section> -->
+</section> 
 
 
 <!-- urls -->
